@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap')
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&display=swap')
+
+$font-work: 'Work Sans', sans-serif
+$font-pt: 'PT Sans', sans-serif
+
+
+
+*
+    padding: 0
+    margin: 0
+
+input, select
+    padding: 4px
+    &:focus
+        outline: none
+
+body
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100vh
+    width: 100vw
+
+#sign-up
+    display: flex
+    height: 480px
+    width: 664px
+    background-color: #fff
+    box-shadow: 1px 2px 32px rgba(12, 12, 12, 0.2)
+    user-select: none
+    .page-title
+        display: flex
+        position: relative
+        width: 21%
+        justify-content: flex-end
+        align-items: flex-end
+        background-color: #5A61ED
+        .title
+            // position: absolute
+            min-width: 165px
+            font-family: $font-pt
+            font-size: 49px
+            // line-height: 63px
+            letter-spacing: 0.5px
+            color: #fff
+            transform: rotate(-90deg) translate(44%, 68%)
+
+
+    .page-content
+        position: relative
+        display: flex
+        flex-direction: column
+        font-family: $font-work
+        font-style: normal
+        padding: 32px 20px
+        width: calc(79% - 40px)
+        .subtitle
+            div:nth-child(1)
+                font-weight: 500
+                font-size: 22px
+                line-height: 26px
+                letter-spacing: -0.46px
+                color: #111111
+            div:nth-child(2)
+                font-weight: 300
+                font-size: 14px
+                line-height: 16px
+        form
+            margin-top: 20px
+            select, input
+                width: 100%
+                height: 100%
+
+            input
+                height: 26px
+                font-size: 14px
+                line-height: 16px
+                color: #111111
+                border: none
+                border-bottom: 1px solid #F2F2F2
+                &::placeholder
+                    transition: all .4s
+                &:focus
+                    &::placeholder
+                        color: transparent
+            .row
+                display: grid
+                margin-top: 30px
+                grid-gap: 15px
+                grid-template-columns: 1fr 1fr
+                &:nth-child(1)
+                    margin-top: 10px
+
+                .first-name
+                    position: relative
+                    &::after
+                        content: 'First Name'
+                        position: absolute
+                        top: -30%
+                        left: 5px
+                        font-weight: 300
+                        font-size: 14px
+                        line-height: 14px
+                        color: #7C7C7C
+                .last-name
+                    position: relative
+                    &::after
+                        content: 'Last Name'
+                        position: absolute
+                        top: -30%
+                        left: 5px
+                        font-weight: 300
+                        font-size: 14px
+                        line-height: 14px
+                        color: #7C7C7C
+                .nationality
+                    position: relative
+                    &::after
+                        content: 'Nationality'
+                        position: absolute
+                        top: -30%
+                        left: 5px
+                        font-weight: 300
+                        font-size: 14px
+                        line-height: 14px
+                        color: #7C7C7C
+                .email
+                    position: relative
+                    &::after
+                        content: 'E-mail'
+                        position: absolute
+                        top: -30%
+                        left: 5px
+                        font-weight: 300
+                        font-size: 14px
+                        line-height: 14px
+                        color: #7C7C7C
+                .birthday
+                    position: relative
+                    &::after
+                        content: 'Date of Birth'
+                        position: absolute
+                        top: -80%
+                        left: 5px
+                        font-weight: 300
+                        font-size: 14px
+                        line-height: 14px
+                        color: #7C7C7C
+                .gender
+                    position: relative
+                    &::after
+                        content: 'Gender'
+                        position: absolute
+                        top: -80%
+                        left: 5px
+                        font-weight: 300
+                        font-size: 14px
+                        line-height: 14px
+                        color: #7C7C7C
+                .pass
+                    position: relative
+                    &::after
+                        content: 'Password'
+                        position: absolute
+                        top: -25%
+                        left: 5px
+                        font-weight: 300
+                        font-size: 14px
+                        line-height: 14px
+                        color: #7C7C7C
+                .repeat-pass
+                    position: relative
+                    &::after
+                        content: 'Confirm Password'
+                        position: absolute
+                        top: -25%
+                        left: 5px
+                        font-weight: 300
+                        font-size: 14px
+                        line-height: 14px
+                        color: #7C7C7C
+
+                
+                .select-item
+                    position: relative
+                    width: 100%
+                    height: 100%
+                    select
+                        border: none
+                        appearance: none   
+                        border-bottom: 1px solid #F2F2F2
+                    .arrow
+                        position: absolute
+                        top: 5px
+                        right: 5px
+                        height: 5px
+                        width: 5px
+                        font-size: 10px
+                        color: #000
+
+                // ROW 
+                .birthday
+                    display: grid
+                    grid-template-columns: 1fr 2fr 1fr
+                    grid-gap: 10px
+                    
+
+                .gender
+                    display: flex
+                    label
+                        display: flex
+                        padding-right: 20px
+                        flex-direction: row-reverse
+                        align-items: center
+                        &:hover
+                            input ~ .checkmark
+                                background-color: #ccc
+                        // input:checked ~ .checkmark 
+                        input:checked ~ .checkmark::after
+                            display: block
+                        .checkmark::after
+                            width: 6px
+                            height: 6px
+                            border-radius: 50%
+                            background-color: #5A61ED
+                    input
+                        display: none
+                        border-radius: 50%
+                    .checkmark
+                        display: flex
+                        position: relative
+                        // position: absolute
+                        // top: 0
+                        // left: 0
+                        margin-right: 5px
+                        height: 12px
+                        width: 12px
+                        justify-content: center
+                        align-items: center
+                        justify-self: center
+                        background-color: #fff
+                        border: 1px solid #5A61ED
+                        border-radius: 50%
+                        &::after
+                            content: ""
+                            position: block
+                            display: none
+        .actions
+            position: absolute
+            bottom: 32px
+            left: 20px
+            display: flex
+            width: calc(100% - 40px)
+            justify-content: space-between
+            align-items: center
+            button
+                padding: 10px 25px
+                font-size: 14px
+                line-height: 18px
+                color: #FFFFFF 
+                border: none
+                background-color: #5A61ED
+
+
+
+// @media screen and (max-width: 1200px)
+// @media screen and (max-width: 992px)
+@media screen and (max-width: 768px)
+    body
+        padding: 0 30px
+        width: calc(100vw - 60px)
+@media screen and (max-width: 576px)
+    body
+        padding: 0
+        width: 100%
+        height: 100%
+    #sign-up
+        height: 100%
+        .page-content
+            form
+                .row
+                    grid-template-columns: 1fr
+                    grid-template-rows: 1fr 1fr
+
+    .actions
+        flex-direction: column-reverse
+        font-size: 14px
+        button
+            margin-bottom: 15px
+
+@media screen and (max-width: 396px)
+    #sign-up
+        flex-direction: column
+        overflow-y: scroll
+        .page-title
+            padding: 5px 0
+            width: 100%
+            align-items: center
+            justify-content: center
+            .title
+                text-align: center
+                font-size: 32px
+                transform: none
+        .page-content
+            padding: 20px 20px
+            width: calc(100% - 40px)
+            height: calc(100% - 40px)
+            .actions
+                position: relative
+                left: 0
+                bottom: 0
+                margin-top: 15px
+                width: 100%
+
+// select 
+//     display: none
+
+
+// .select-selected 
+//     background-color: DodgerBlue
+
+
+// /*style the arrow inside the select element:*/
+// .select-selected::after 
+//     position: absolute
+//     content: ""
+//     top: 14px
+//     right: 10px
+//     width: 0
+//     height: 0
+//     border: 6px solid transparent
+//     border-color: #fff transparent transparent transparent
+
+
+// /*point the arrow upwards when the select box is open (active):*/
+// .select-selected.select-arrow-active::after 
+//     border-color: transparent transparent #fff transparent
+//     top: 7px
+
+
+// /*style the items (options), including the selected item:*/
+// .select-items div,.select-selected 
+//     color: #ffffff
+//     padding: 8px 16px
+//     border: 1px solid transparent
+//     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent
+//     cursor: pointer
+//     user-select: none
+
+
+// /*style items (options):*/
+// .select-items 
+//     position: absolute
+//     background-color: DodgerBlue
+//     top: 100%
+//     left: 0
+//     right: 0
+//     z-index: 99
+
+
+// /*hide the items when the select box is closed:*/
+// .select-hide 
+//     display: none
+
+
+// .select-items div:hover, .same-as-selected 
+//     background-color: rgba(0, 0, 0, 0.1)
+
+
+
+
+//     .raz {
+//   position: relative;
+// }
+// .raz span {
+//   position: absolute;
+//   bottom: 0;
+//   left: 2px;
+//   opacity: .5;
+//   visibility: hidden;
+//   transition: .2s;
+// }
+// .raz input:placeholder-shown ~ span {
+//   visibility: visible;
+// }
+// .raz input:placeholder-shown:focus ~ span,
+// .raz input:not(:placeholder-shown) ~ span {
+//   bottom: 100%;
+//   opacity: 1;
+//   font-size: 80%;
+//   visibility: visible;
+// }
+    // <label class="raz"><input type="email" placeholder="&nbsp;"><span>Email</span></label>
+

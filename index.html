@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+
+    <link rel="stylesheet" href="styles/minify/main.min.css">
+    <script src="https://kit.fontawesome.com/a8382d35aa.js"></script>
+</head>
+<body>
+
+
+    <section id="sign-up">
+        <div class="page-title">
+            <div class="title">Sign up</div>
+        </div>
+        <div class="page-content">
+            <div class="subtitle">
+                <div>New user?</div>
+                <div>Use the form below to create your account.</div>
+            </div>
+
+            <form action="/signup">
+                <div class="row">
+                    <div class="first-name">
+                        <input type="text" placeholder="Ivan" name="username">
+                    </div>
+                    <div class="last-name">
+                        <input type="text" placeholder="Ivanov" name="userlastname">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="nationality">
+                        <div class="select-item">
+                            <select name="nationality" id="">
+                                <option value="0">American</option>
+                                <option value="1">Belarusian</option>
+                                <option value="2">Russian</option>
+                                <option value="3">Ukranian</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="email">
+                        <input type="email" name="email" id="email" placeholder="example@gmail.com">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="birthday">
+                        <div class="select-item">
+                            <select name="day" id="day">
+                                <option value="0">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                            </select>
+                            <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="select-item">
+                            <select name="month" id="month">
+                                <option value="0">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                            </select>
+                            <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="select-item">
+                            <select name="year" id="year">
+                                <option value="0">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
+                            </select>
+                            <div class="arrow"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                    </div>
+
+                    <div class="gender">
+                        <!-- <label>
+                            <input type="radio" name="Male" checked> Male
+                        </label>
+                        <label>
+                            <input type="radio" name="Famale" > Famale
+                        </label> -->
+                        <label>Male
+                            <input type="checkbox" checked="checked" name="male">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label>Famale
+                            <input type="checkbox" name="famale">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="pass">
+                        <input type="password" placeholder="*****" name="password">
+                    </div>
+                    <div class="repeat-pass">
+                        <input type="password" placeholder="*****" name="repeatpassword">
+                    </div>
+                </div>
+            </form>
+            
+            <div class="actions">
+                <div class="login">Have an account? <a href="#">Login</a></div>
+                <button>Complete Signup</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <script src="scripts/scripts.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
+* {
+  padding: 0;
+  margin: 0; }
+
+input, select {
+  padding: 4px; }
+  input:focus, select:focus {
+    outline: none; }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100vw; }
+
+#sign-up {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 480px;
+  width: 664px;
+  background-color: #fff;
+  -webkit-box-shadow: 1px 2px 32px rgba(12, 12, 12, 0.2);
+          box-shadow: 1px 2px 32px rgba(12, 12, 12, 0.2);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  #sign-up .page-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 21%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    background-color: #5A61ED; }
+    #sign-up .page-title .title {
+      min-width: 165px;
+      font-family: "PT Sans", sans-serif;
+      font-size: 49px;
+      letter-spacing: 0.5px;
+      color: #fff;
+      -webkit-transform: rotate(-90deg) translate(44%, 68%);
+              transform: rotate(-90deg) translate(44%, 68%); }
+  #sign-up .page-content {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-family: "Work Sans", sans-serif;
+    font-style: normal;
+    padding: 32px 20px;
+    width: calc(79% - 40px); }
+    #sign-up .page-content .subtitle div:nth-child(1) {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: -0.46px;
+      color: #111111; }
+    #sign-up .page-content .subtitle div:nth-child(2) {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px; }
+    #sign-up .page-content form {
+      margin-top: 20px; }
+      #sign-up .page-content form select, #sign-up .page-content form input {
+        width: 100%;
+        height: 100%; }
+      #sign-up .page-content form input {
+        height: 26px;
+        font-size: 14px;
+        line-height: 16px;
+        color: #111111;
+        border: none;
+        border-bottom: 1px solid #F2F2F2; }
+        #sign-up .page-content form input::-webkit-input-placeholder {
+          -webkit-transition: all .4s;
+          transition: all .4s; }
+        #sign-up .page-content form input::-moz-placeholder {
+          -moz-transition: all .4s;
+          transition: all .4s; }
+        #sign-up .page-content form input:-ms-input-placeholder {
+          -ms-transition: all .4s;
+          transition: all .4s; }
+        #sign-up .page-content form input::-ms-input-placeholder {
+          -ms-transition: all .4s;
+          transition: all .4s; }
+        #sign-up .page-content form input::placeholder {
+          -webkit-transition: all .4s;
+          transition: all .4s; }
+        #sign-up .page-content form input:focus::-webkit-input-placeholder {
+          color: transparent; }
+        #sign-up .page-content form input:focus::-moz-placeholder {
+          color: transparent; }
+        #sign-up .page-content form input:focus:-ms-input-placeholder {
+          color: transparent; }
+        #sign-up .page-content form input:focus::-ms-input-placeholder {
+          color: transparent; }
+        #sign-up .page-content form input:focus::placeholder {
+          color: transparent; }
+      #sign-up .page-content form .row {
+        display: grid;
+        margin-top: 30px;
+        grid-gap: 15px;
+        grid-template-columns: 1fr 1fr; }
+        #sign-up .page-content form .row:nth-child(1) {
+          margin-top: 10px; }
+        #sign-up .page-content form .row .first-name {
+          position: relative; }
+          #sign-up .page-content form .row .first-name::after {
+            content: 'First Name';
+            position: absolute;
+            top: -30%;
+            left: 5px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            color: #7C7C7C; }
+        #sign-up .page-content form .row .last-name {
+          position: relative; }
+          #sign-up .page-content form .row .last-name::after {
+            content: 'Last Name';
+            position: absolute;
+            top: -30%;
+            left: 5px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            color: #7C7C7C; }
+        #sign-up .page-content form .row .nationality {
+          position: relative; }
+          #sign-up .page-content form .row .nationality::after {
+            content: 'Nationality';
+            position: absolute;
+            top: -30%;
+            left: 5px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            color: #7C7C7C; }
+        #sign-up .page-content form .row .email {
+          position: relative; }
+          #sign-up .page-content form .row .email::after {
+            content: 'E-mail';
+            position: absolute;
+            top: -30%;
+            left: 5px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            color: #7C7C7C; }
+        #sign-up .page-content form .row .birthday {
+          position: relative; }
+          #sign-up .page-content form .row .birthday::after {
+            content: 'Date of Birth';
+            position: absolute;
+            top: -80%;
+            left: 5px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            color: #7C7C7C; }
+        #sign-up .page-content form .row .gender {
+          position: relative; }
+          #sign-up .page-content form .row .gender::after {
+            content: 'Gender';
+            position: absolute;
+            top: -80%;
+            left: 5px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            color: #7C7C7C; }
+        #sign-up .page-content form .row .pass {
+          position: relative; }
+          #sign-up .page-content form .row .pass::after {
+            content: 'Password';
+            position: absolute;
+            top: -25%;
+            left: 5px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            color: #7C7C7C; }
+        #sign-up .page-content form .row .repeat-pass {
+          position: relative; }
+          #sign-up .page-content form .row .repeat-pass::after {
+            content: 'Confirm Password';
+            position: absolute;
+            top: -25%;
+            left: 5px;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            color: #7C7C7C; }
+        #sign-up .page-content form .row .select-item {
+          position: relative;
+          width: 100%;
+          height: 100%; }
+          #sign-up .page-content form .row .select-item select {
+            border: none;
+            -webkit-appearance: none;
+               -moz-appearance: none;
+                    appearance: none;
+            border-bottom: 1px solid #F2F2F2; }
+          #sign-up .page-content form .row .select-item .arrow {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            height: 5px;
+            width: 5px;
+            font-size: 10px;
+            color: #000; }
+        #sign-up .page-content form .row .birthday {
+          display: grid;
+          grid-template-columns: 1fr 2fr 1fr;
+          grid-gap: 10px; }
+        #sign-up .page-content form .row .gender {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
+          #sign-up .page-content form .row .gender label {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding-right: 20px;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: reverse;
+                -ms-flex-direction: row-reverse;
+                    flex-direction: row-reverse;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center; }
+            #sign-up .page-content form .row .gender label:hover input ~ .checkmark {
+              background-color: #ccc; }
+            #sign-up .page-content form .row .gender label input:checked ~ .checkmark::after {
+              display: block; }
+            #sign-up .page-content form .row .gender label .checkmark::after {
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background-color: #5A61ED; }
+          #sign-up .page-content form .row .gender input {
+            display: none;
+            border-radius: 50%; }
+          #sign-up .page-content form .row .gender .checkmark {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            position: relative;
+            margin-right: 5px;
+            height: 12px;
+            width: 12px;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            justify-self: center;
+            background-color: #fff;
+            border: 1px solid #5A61ED;
+            border-radius: 50%; }
+            #sign-up .page-content form .row .gender .checkmark::after {
+              content: "";
+              position: block;
+              display: none; }
+    #sign-up .page-content .actions {
+      position: absolute;
+      bottom: 32px;
+      left: 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: calc(100% - 40px);
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      #sign-up .page-content .actions button {
+        padding: 10px 25px;
+        font-size: 14px;
+        line-height: 18px;
+        color: #FFFFFF;
+        border: none;
+        background-color: #5A61ED; }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 30px;
+    width: calc(100vw - 60px); } }
+
+@media screen and (max-width: 576px) {
+  body {
+    padding: 0;
+    width: 100%;
+    height: 100%; }
+  #sign-up {
+    height: 100%; }
+    #sign-up .page-content form .row {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr; }
+  .actions {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    font-size: 14px; }
+    .actions button {
+      margin-bottom: 15px; } }
+
+@media screen and (max-width: 396px) {
+  #sign-up {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow-y: scroll; }
+    #sign-up .page-title {
+      padding: 5px 0;
+      width: 100%;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      #sign-up .page-title .title {
+        text-align: center;
+        font-size: 32px;
+        -webkit-transform: none;
+                transform: none; }
+    #sign-up .page-content {
+      padding: 20px 20px;
+      width: calc(100% - 40px);
+      height: calc(100% - 40px); }
+      #sign-up .page-content .actions {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        margin-top: 15px;
+        width: 100%; } }
