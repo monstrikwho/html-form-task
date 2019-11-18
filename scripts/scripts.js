@@ -37,4 +37,124 @@ window.onload = function() {
             selectYear.insertAdjacentHTML('beforeend', option);
         }
 
+
+    // send form
+        var button = document.querySelector('.actions button');
+        var res = {
+            userName: false,
+            userLastName: false,
+            userEmail: false,
+            userPass: false,
+            userPassRepeat: false
+        };
+
+        button.addEventListener('click', () => {
+            checkName();
+            checkEmail();
+            
+            if(res.userName && res.userLastName && res.userEmail && res.userPass && res.userPassRepeat) {
+                alert('good');
+            }
+        });
+
+        
+        var userName = document.querySelector('input[name="username"]');
+        var userLastName = document.querySelector('input[name="userlastname"]');
+        var userEmail = document.querySelector('input[name="email"]');
+        var userPass = document.querySelector('input[name="password"]');
+        var userPassRepeat = document.querySelector('input[name="repeatpassword"]');
+
+
+        var checkName = () => {
+            if(userName.value.length > 2) {
+                userName.parentElement.querySelector('.check').style.display = 'block';
+                userName.style.borderBottom = '1px solid #f2f2f2';
+                res.userName = true;
+            } else {
+                userName.style.borderBottom = '1px solid #e32929';
+                userName.parentElement.querySelector('.check').style.display = 'none';
+                res.userName = false;
+            }
+            
+            if(userLastName.value.length > 2) {
+                userLastName.parentElement.querySelector('.check').style.display = 'block';
+                userLastName.style.borderBottom = '1px solid #f2f2f2';
+                res.userLastName = true;
+            } else {
+                userLastName.style.borderBottom = '1px solid #e32929';
+                userLastName.parentElement.querySelector('.check').style.display = 'none';
+                res.userLastName = false;
+            }
+        }
+
+
+        var checkEmail = () => {
+            var userEmailValue = userEmail.value.split('');
+            var j = 2;
+            var posS = 0;
+            
+            for(let i=0; i < userEmailValue.length; i++) {
+                if(userEmailValue[i] === '@') {
+                    posS = i;
+                    j--;
+                }
+                if(userEmailValue[i] === '.' && i > posS && i !== userEmailValue.length - 1 && posS + 1 !== i) {
+                    j--;
+                }
+            }
+
+            if(j === 0) {
+                userEmail.parentElement.querySelector('.check').style.display = 'block';
+                userEmail.style.borderBottom = '1px solid #f2f2f2';
+                res.userEmail = true;
+            } else {
+                userEmail.style.borderBottom = '1px solid #e32929';
+                userEmail.parentElement.querySelector('.check').style.display = 'none';
+                res.userEmail = false;
+            }
+        }
+
+        var checkPass = () => {
+            if(userPass.value.length > 8) {
+                userPass.parentElement.querySelector('.check').style.display = 'block';
+                userPass.style.borderBottom = '1px solid #f2f2f2';
+                res.userPass = true;
+            } else {
+                userPass.style.borderBottom = '1px solid #e32929';
+                userPass.parentElement.querySelector('.check').style.display = 'none';
+                res.userPass = false;
+            }
+            
+            if(userPassRepeat.value === userPass.value) {
+                userPassRepeat.parentElement.querySelector('.check').style.display = 'block';
+                userPassRepeat.style.borderBottom = '1px solid #f2f2f2';
+                res.userPassRepeat = true;
+            } else {
+                userPassRepeat.style.borderBottom = '1px solid #e32929';
+                userPassRepeat.parentElement.querySelector('.check').style.display = 'none';
+                res.userPassRepeat = false;
+            }
+        }
+
+        
+        // 
+            userName.oninput = () => {
+                checkName();
+            }
+            userLastName.oninput = () => {
+                checkName();
+            }
+            userEmail.oninput = () => {
+                checkEmail();
+            }
+            userPass.oninput = () => {
+                checkPass();
+            }
+            userPassRepeat.oninput = () => {
+                checkPass();
+            }
+
+
+
+            
 }
