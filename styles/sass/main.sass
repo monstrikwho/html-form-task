@@ -11,7 +11,10 @@ $font-pt: 'PT Sans', sans-serif
     margin: 0
 
 input, select
+    width: 100%
+    height: 100%
     padding: 4px
+    background: transparent
     &:focus
         outline: none
 
@@ -68,11 +71,9 @@ body
                 line-height: 16px
         form
             margin-top: 20px
-            select, input
-                width: 100%
-                height: 100%
 
             input
+                width: calc(100% - 8px)
                 height: 26px
                 font-size: 14px
                 line-height: 16px
@@ -163,7 +164,7 @@ body
                     &::after
                         content: 'Password'
                         position: absolute
-                        top: -25%
+                        top: -35%
                         left: 5px
                         font-weight: 300
                         font-size: 14px
@@ -174,7 +175,7 @@ body
                     &::after
                         content: 'Confirm Password'
                         position: absolute
-                        top: -25%
+                        top: -35%
                         left: 5px
                         font-weight: 300
                         font-size: 14px
@@ -216,8 +217,7 @@ body
                         &:hover
                             input ~ .checkmark
                                 background-color: #ccc
-                        // input:checked ~ .checkmark 
-                        input:checked ~ .checkmark::after
+                        input[checked="checked"] ~ .checkmark::after
                             display: block
                         .checkmark::after
                             width: 6px
@@ -261,7 +261,8 @@ body
                 color: #FFFFFF 
                 border: none
                 background-color: #5A61ED
-
+                &:focus
+                    outline: none
 
 
 // @media screen and (max-width: 1200px)
@@ -277,41 +278,45 @@ body
         height: 100%
     #sign-up
         height: 100%
+        .page-title
+            align-items: flex-start
+            .title
+                transform: rotate(-90deg) translate(-50%, 68%)
         .page-content
             form
                 .row
                     grid-template-columns: 1fr
                     grid-template-rows: 1fr 1fr
+                    grid-gap: 30px
 
-    .actions
-        flex-direction: column-reverse
-        font-size: 14px
-        button
-            margin-bottom: 15px
+            .actions
+                position: relative
+                bottom: 0
+                margin-top: 20px
+                flex-direction: column-reverse
+                font-size: 14px
+                button
+                    margin-bottom: 15px
 
 @media screen and (max-width: 396px)
     #sign-up
-        flex-direction: column
-        overflow-y: scroll
+        width: 100%
         .page-title
-            padding: 5px 0
-            width: 100%
-            align-items: center
-            justify-content: center
+            width: 18%
+            font-size: 22px
             .title
-                text-align: center
                 font-size: 32px
-                transform: none
+                transform: rotate(-90deg) translate(-15%, 135%)
         .page-content
-            padding: 20px 20px
-            width: calc(100% - 40px)
-            height: calc(100% - 40px)
+            padding: 25px 10px
+            width: calc(82% - 20px)
             .actions
-                position: relative
-                left: 0
-                bottom: 0
-                margin-top: 15px
-                width: 100%
+                
+                
+
+
+
+
 
 // select 
 //     display: none
