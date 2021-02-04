@@ -1,1 +1,1 @@
-https://monstrikwho.github.io/task1/index.html
+https://monstrikwho.github.io/html-form-task/
